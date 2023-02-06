@@ -10,12 +10,12 @@ import { MyData } from "./export"
         </template>
         <div class="width: 80px;">
             <CalendarCell v-for="day in days">{{ day }}</CalendarCell>
-            <p>{{Data}}</p>
+            <p>{{MyData}}</p>
         </div>
     </el-popover> -->
 
     <div class="test">
-        <p>hello {{MyData}}</p>
+        <p v-for="i in MyData">{{i}}</p>
     </div>
 </template> 
 

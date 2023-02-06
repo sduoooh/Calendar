@@ -1,8 +1,7 @@
 <script setup>
 import { ref, computed } from "vue"
 
-import { cellWidth, openCell } from "./export.js"
-import DDLOperations  from "./DDLOperations.vue"
+import { cellWidth, openCell } from "./export"
 
 defineProps(["day"])
 
@@ -36,7 +35,6 @@ function clickEvent(cellWidth, number) {
                             <div><p>DDL内容 发布群聊 紧急程度</p></div>
                             <div class="m-2"><p>{{content}}  {{group}}  {{rank}}</p></div>
                         </template>
-                        <DDLOperations :index="day.index" />
                     </el-popover>
                 </div>
             </div>

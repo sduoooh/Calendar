@@ -3,7 +3,7 @@ import { ref } from "vue"
 class day {
     constructor(Data) {
         this.day = Data.getDate()
-        this.color = null //Data.color
+        this.color = "white" //Data.color
         this.weekRank = Data.getDay()
         this.show = null //Data.information
         this.index = null //Data.index
@@ -26,6 +26,10 @@ let time = start.getDate() + now.getDate() + end.getDate()
 
 for (let i = start,j = 1;j <= time; j++){
     i.setDate(j)
-    temp = new day(i)
+    let temp = new day(i)
     MyData.value.push(temp)
 }
+
+export const openCell = ref("10px")
+
+export const cellWidth = ref()
